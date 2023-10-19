@@ -25,22 +25,9 @@ Using the example here:
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
-An initial src/schema.prisma file, before the generated part:
+Rename the file prisma/schema.prisma.example to prisma/schema.prisma.
 
-```
-generator client {
-  provider = "prisma-client-js"
-}
-
-datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-}
-
-generator typegraphql {
-  provider = "typegraphql-prisma"
-}
-```
+It's a minimum version, containing a configuration to generate the Prisma schema.
 
 The DATABASE_URL should match the database been used by prisma.
 
