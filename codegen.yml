@@ -1,0 +1,8 @@
+overwrite: true
+schema: './prisma/schema.prisma'
+documents: './src/**/*.graphql'
+generates:
+  './src/generatedTypeDefs.ts':
+    plugins:
+      - 'typescript'
+      - 'typescript-resolvers'
